@@ -1,0 +1,19 @@
+{
+  "name": "to-do",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@compodoc/live-server": "^1.2.3",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.52.1"
+  },
+  "scripts": {
+    "live-server": "live-server",
+    "sass": "sass --watch sass/main.scss css/style.css",
+    "start:dev": "npm-run-all --parallel live-server sass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
