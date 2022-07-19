@@ -1,12 +1,280 @@
+body {
+  background-color: rgb(233, 232, 232);
+}
+
 .search-bar {
-  width: 50%;
-  margin-left: 25%;
+  position: relative;
+  width: 76%;
   padding-top: 100px;
 }
 .search-bar input {
   width: 100%;
   border-radius: 45px;
   height: 50px;
+  outline: none;
+  box-shadow: none;
+}
+.search-bar img {
+  width: 2%;
+  top: 112px;
+  position: absolute;
+  left: 20px;
+}
+
+.search-body {
+  background-color: #53a6c9;
+  height: 250px;
+  display: flex;
+}
+.search-body .to-do {
+  display: flex;
+  align-items: center;
+  width: 19%;
+  padding-top: 145px;
+  padding-left: 70px;
+}
+.search-body .to-do h1 {
+  color: #fff;
+  font-size: 24px;
+}
+.search-body .to-do img {
+  width: 11%;
+  padding-right: 6px;
+}
+
+.left-menu {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+.left-menu ul {
+  margin-bottom: 45px;
+}
+.left-menu h1 {
+  color: grey;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.left-menu a {
+  font-size: 18px;
+  text-decoration: none;
+  color: gray;
+  font-weight: 500;
+}
+.left-menu .tags-holder {
+  padding-left: 15px;
+}
+.left-menu .tags-holder .tags {
+  margin-bottom: -45px;
+}
+.left-menu .tags-holder .backend li {
+  font-weight: 500;
+  color: grey;
+}
+.left-menu .tags-holder .frontend li {
+  font-weight: 500;
+  color: grey;
+}
+
+button {
+  padding: 10px 40px;
+  background-color: #53a6c9;
+  color: #fff;
+  font-weight: bold;
+}
+
+.button-holder {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 40px;
+}
+.button-holder .all {
+  margin-left: -25px;
+  border-radius: 45px;
+  display: flex;
+  justify-content: start;
+}
+.button-holder .todo {
+  margin-left: 50px;
+}
+
+.separate-menu {
+  display: flex;
+}
+.separate-menu .tasks {
+  height: 80%;
+  position: absolute;
+  right: 55px;
+  border-radius: 25px;
+  top: 200px;
+  display: flex;
+  width: 81%;
+  background-color: #fff;
+  margin-left: 3%;
+}
+.separate-menu .tasks .col-md-6 {
+  right: 67px;
+  padding-top: 50px;
+}
+.separate-menu .tasks .col-md-6 .one-task {
+  display: flex;
+  padding: 20px;
+  border: 1px solid grey;
+}
+.separate-menu .tasks .col-md-6 .one-task .line-holder {
+  align-self: center;
+}
+.separate-menu .tasks .col-md-6 .one-task .line-holder .line {
+  height: 2px;
+  width: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-color: grey;
+  margin-bottom: 3px;
+}
+.separate-menu .tasks .col-md-6 .one-task .task-collab h1 {
+  font-size: 20px;
+}
+.separate-menu .tasks .col-md-6 .one-task .task-collab h2 {
+  font-size: 18px;
+}
+.separate-menu .tasks .col-md-6 .one-task .task-collab .task-buttons {
+  display: flex;
+  gap: 10px;
+}
+.separate-menu .tasks .col-md-6 .one-task .task-collab .task-buttons button {
+  padding: 5px;
+  background-color: lightgray;
+  color: black;
+  font-weight: normal;
+  border: none;
+}
+.separate-menu .from {
+  border: 1px solid gray;
+  height: 100px;
+  background-color: #e9e8e8;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.separate-menu .forms-holder input {
+  width: 80%;
+  height: 85px;
+  margin-left: 10%;
+  margin-bottom: 25px;
+}
+.separate-menu .date {
+  margin-left: 10%;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 75px;
+}
+
+.date-picker {
+  width: 45%;
+  height: 50px;
+  display: inline-block;
+  border: 1px solid grey;
+  min-width: 10rem;
+  min-height: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+  position: relative;
+  isolation: isolate;
+}
+
+.date-picker,
+.date-picker > * {
+  cursor: text;
+  font-size: 1.2rem;
+}
+
+.date-picker:focus > input[type=date],
+.date-picker:focus-within > input[type=date] {
+  color: grey;
+}
+
+.date-picker > .placeholder::after {
+  content: "Start Date";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  top: 43%;
+  left: -80px;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: grey;
+  font-weight: 500;
+}
+
+.date-picker:focus > .placeholder,
+.date-picker:focus-within > .placeholder,
+.date-picker > input[type=date]:valid + .placeholder {
+  display: none;
+}
+
+.date-picker > input[type=date] {
+  background: none;
+  border: none;
+  outline: none;
+  color: transparent;
+  font-family: serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.date-picker > input[type=date]:valid {
+  color: #00f !important;
+}
+
+.end-date > .placeholder::after {
+  content: "End Date";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  top: 43%;
+  left: -80px;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: grey;
+  font-weight: 500;
+}
+
+.btn {
+  margin-left: 8%;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 34%;
+}
+.icons img {
+  width: 10%;
+}
+
+.form {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 34%;
+}
+
+.form-holder .icons {
+  position: absolute;
+  top: 87px;
 }
 
 /*# sourceMappingURL=style.css.map */
