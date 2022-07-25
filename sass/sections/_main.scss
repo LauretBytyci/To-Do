@@ -10,6 +10,7 @@ body{
         height: 50px;
         outline: none;
         box-shadow: none;
+        padding-left: 60px;
     }
     img{
         width: 2%;
@@ -173,6 +174,9 @@ button{
         height: 85px;
         margin-left: 10%;
         margin-bottom: 25px;
+        font-weight: 500;
+        font-size: 20px;
+        padding-left: 20px;
     }
 }
 .date{
@@ -262,6 +266,12 @@ button{
   }
   .btn{
     margin-left: 8%;
+    input{
+        padding: 10px 40px;
+        background-color:#53a6c9;
+        color: #fff;
+        font-weight: bold;
+    }
   }
 
 .icons{
@@ -282,4 +292,72 @@ button{
         position: absolute;
         top: 87px;
     }
+}
+
+
+.forma{
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    .delete{
+        background-color:transparent;
+        padding: 0;
+        img{
+            width: 6%;
+        }
+        width: 20%;
+          padding: 10px 40px;
+    }
+    .text-input{
+        padding: 40px 0px;
+        margin-bottom: 20px;
+        
+    }
+   
+}
+.text{
+    width: 100%;
+    padding-left: 15%;
+    height: 140px;
+}
+
+@media only screen and (max-width: 500px) {
+.tasks{
+    flex-direction: column;
+}
+.left-menu-holder{
+    display: none;
+}
+.search-bar{
+    h1{
+        display: none;
+    }
+    img{
+        top: 117px;
+        width: 7%;
+    }
+}
+.search-body{
+    .to-do{
+        h1{
+            display: none;
+        }
+    }
+}
+.separate-menu{
+    .tasks{
+        position: unset;
+        margin: 0;
+        width: 100%;
+    }
+}
+.form-holder{
+    .icons{
+       top: 95%;
+    }
+}
+.date-picker > .placeholder::after {
+    left: -20%;
+}
 }
