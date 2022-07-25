@@ -75,75 +75,13 @@
         </div>
     
         <div class="tasks">
-            <div class="col-md-6">
-                <div class="one-task">
-                    <div class="line-holder">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        
-                    </div>
-                    <div class="task-collab">
-                        <h1>Task 3</h1>
-                        <h2>Pershkrimi 3</h2>
-                        <div class="task-buttons">
-                            <button>Backend</button>
-                            <button>Frontend</button>
-                        </div>
-                    </div>
-                    <div class="icons">
-                        <img src="assets/icons/exclamation.svg" alt="">
-                        <img src="assets/icons/star.svg" alt="">
-                        <img src="assets/icons/trash.svg" alt="">
-                        <img src="assets/icons/menu-dots-vertical.svg" alt="">
-                    </div>
-                </div>
-                <div class="one-task">
-                    <div class="line-holder">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        
-                    </div>
-                    <div class="task-collab">
-                        <h1>Task 2</h1>
-                        <h2>Pershkrimi 2</h2>
-                        <div class="task-buttons">
-                            <button>Backend</button>
-                            <button>Frontend</button>
-                        </div>
-                    </div>
-                    <div class="icons">
-                        <img src="assets/icons/exclamation.svg" alt="">
-                        <img src="assets/icons/star.svg" alt="">
-                        <img src="assets/icons/trash.svg" alt="">
-                        <img src="assets/icons/menu-dots-vertical.svg" alt="">
-                    </div>
-                </div>
-                <div class="one-task edit">
-                    <div class="line-holder">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        
-                    </div>
-                    <div class="task-collab">
-                        <h1>Task 1</h1>
-                        <h2>Pershkrimi 1</h2>
-                        <div class="task-buttons">
-                            <button>Backend</button>
-                            <button>Frontend</button>
-                        </div>
-                    </div>
-                    <div class="icons">
-                        <img src="assets/icons/exclamation.svg" alt="">
-                        <img src="assets/icons/star.svg" alt="">
-                        <img src="assets/icons/trash.svg" alt="">
-                        <img src="assets/icons/menu-dots-vertical.svg" alt="">
-                    </div>
-                </div>
+            <div class="col-md-6" id="toDoList">
             </div>
             <div class="col-md-6">
+            <form id="createToDoForm">
                 <div class="form-holder">
                     <div class="from">
-                        <input type="checkbox">Mark as Done
+                        <input type="checkbox" name="mark_as_done">Mark as Done
                     </div>
                         <div class="icons">
                             <img src="assets/icons/exclamation.svg" alt="">
@@ -153,25 +91,27 @@
                         </div> 
                 </div>
                 <div class="forms-holder">
-                    <input type="text" placeholder="Title">
+                    <input type="text" placeholder="Title" name="title">
                 </div>
                 <div class="date">
                     <div class="date-picker" tabindex="0">
-                        <input type="date" required>
+                        <input type="date" name="start_date" required>
                         <div class="placeholder"></div> 
                     </div>
                     <div class="date-picker end-date" tabindex="0">
-                        <input type="date" required>
+                        <input type="date" name="end_date" required>
                         <div class="placeholder"></div> 
                     </div>
                 </div>
                 <div class="forms-holder">
-                    <input type="text" placeholder="Notes">
-                    <div class="btn">
-                        <button>Save</button>
+                    <input type="text" name="notes" placeholder="Notes">
+                    <div id="saveBtn" class="btn">
+                        <button id="addTodoBtn">Save</button>
                     </div>
                 </div>
+            </form>
             </div>
+
         </div>
     </div>
 

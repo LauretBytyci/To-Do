@@ -106,7 +106,6 @@ button {
   display: flex;
 }
 .separate-menu .tasks {
-  height: 80%;
   position: absolute;
   right: 55px;
   border-radius: 25px;
